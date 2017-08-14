@@ -1,0 +1,13 @@
+---
+- name: Pull MySQL server image from Docker Hub
+  docker_image:
+    name: mysql/mysql-server
+    tag: "5.7"
+- name: Pull Nginx image from Docker Hub
+  docker_image:
+    name: nginx
+    tag: "1.12"
+- name: Pull Python image from Docker Hub
+  docker_image:
+    name: python
+    tag: "3.6.2"

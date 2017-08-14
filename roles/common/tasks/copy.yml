@@ -1,0 +1,16 @@
+---
+- name: Copy hosts to location.
+  copy:
+    src: /etc/hosts
+    dest: /tmp/hosts
+    mode: 0644
+- name: Copy random.txt to location.
+  copy:
+    src: random.txt
+    dest: /tmp/random.txt
+    mode: 0644
+- name: Copy hello.py to location.
+  copy:
+    src: hello.py
+    dest: /home/vagrant/hello.py
+    mode: 0644

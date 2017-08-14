@@ -1,0 +1,4 @@
+---
+- include: hello.yml
+- include: copy.yml
+- include: install.yml

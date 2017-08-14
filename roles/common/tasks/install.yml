@@ -1,0 +1,13 @@
+---
+- name: Install latest versions of packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - vim
+    - git
+    - curl
+  become: true
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes

@@ -1,0 +1,27 @@
+---
+- hosts: masters
+  environment:
+    PYTHONPATH: "{{ lookup('env','PYTHONPATH') }}:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages"
+  gather_facts: yes
+  vars:
+    run_docker: "N"
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=86400
+      when: ansible_os_family == "Debian"
+  roles:
+    - role: angstwad.docker_ubuntu
+      when: run_docker == "Y"
+    - role: common
+    - role: docker
+      when: run_docker == "Y"
+- hosts: slaves
+  environment:
+    PYTHONPATH: "{{ lookup('env','PYTHONPATH') }}:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages"
+  gather_facts: yes
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=86400
+      when: ansible_os_family == "Debian"
+  roles:
+    - role: common

@@ -1,0 +1,7 @@
+---
+- name: Check for hello.log.
+  stat: path=/tmp/hello.log
+  register: hello_check
+- name: Plain echo into hello.log.
+  shell: echo "Hello hello" >> /tmp/hello.log
+  when: hello_check.stat.exists == False
