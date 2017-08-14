@@ -9,6 +9,7 @@
     - name: Update apt cache if needed.
       apt: update_cache=yes cache_valid_time=86400
       when: ansible_os_family == "Debian"
+      become: true
   roles:
     - role: angstwad.docker_ubuntu
       when: run_docker == "Y"
@@ -23,5 +24,6 @@
     - name: Update apt cache if needed.
       apt: update_cache=yes cache_valid_time=86400
       when: ansible_os_family == "Debian"
+      become: true
   roles:
     - role: common
