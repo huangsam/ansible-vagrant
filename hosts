@@ -1,3 +1,6 @@
+[local]
+localhost ansible_connection=local
+
 [masters]
 192.168.33.10
 

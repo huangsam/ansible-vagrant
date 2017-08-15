@@ -3,7 +3,5 @@
   template:
     src: templates/my.conf.j2
     dest: /etc/my.conf
-    owner: vagrant
-    group: vagrant
     mode: 0644
   become: true

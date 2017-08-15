@@ -4,3 +4,4 @@
     user: vagrant
     state: present
     key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  when: ansible_os_family == "Debian"

@@ -9,8 +9,3 @@
     src: random.txt
     dest: /tmp/random.txt
     mode: 0644
-- name: Copy hello.py to location.
-  copy:
-    src: hello.py
-    dest: /home/vagrant/hello.py
-    mode: 0644
