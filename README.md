@@ -1,5 +1,7 @@
 # vagrant-playbook
 
+[![Build Status](https://travis-ci.org/huangsam/vagrant-playbook.svg?branch=master)](https://travis-ci.org/huangsam/vagrant-playbook)
+
 Apply Ansible playbook to Vagrant cluster
 
 ## Infrastructure
