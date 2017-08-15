@@ -4,7 +4,11 @@
     name: "{{ item.name }}"
     tag: "{{ item.tag }}"
   with_items:
-    - { name: "hello-world", tag: "latest" }
-    - { name: "mysql/mysql-server", tag: "5.7" }
-    - { name: "nginx", tag: "1.12" }
-    - { name: "python", tag: "3.6.2" }
+    - name: "hello-world"
+      tag: "latest"
+    - name: "mysql/mysql-server"
+      tag: "5.7"
+    - name: "nginx"
+      tag: "1.12"
+    - name: "python"
+      tag: "3.6.2"
