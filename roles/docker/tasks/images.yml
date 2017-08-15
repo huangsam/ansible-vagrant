@@ -12,3 +12,4 @@
       tag: "1.12"
     - name: "python"
       tag: "3.6.2"
+  when: ansible_os_family == "Debian" and exec_mode == "vm"

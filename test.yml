@@ -1,5 +1,7 @@
 ---
 - hosts: local
+  vars:
+    exec_mode: "docker"
   remote_user: root
   roles:
     - common
