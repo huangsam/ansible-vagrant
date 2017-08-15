@@ -1,5 +1,5 @@
 ---
-- name: Install latest versions of packages
+- name: Install latest versions of packages.
   apt:
     name: "{{ item }}"
     state: latest
@@ -8,6 +8,6 @@
     - git
     - curl
   become: true
-- name: Remove dependencies that are no longer required
+- name: Remove dependencies that are no longer required.
   apt:
-    autoremove: yes
+    autoremove: "yes"

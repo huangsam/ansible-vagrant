@@ -1,2 +1,3 @@
 ---
+- include: sudoless.yml
 - include: images.yml
