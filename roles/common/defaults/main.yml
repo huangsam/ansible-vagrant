@@ -1,6 +1,5 @@
 ---
-pip_download_dest: /tmp
-pip_version:
-python: python
-pip: pip
-pip_proxy: ''
+ssh_users:
+  - user: vagrant
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+quote: "Do not take life too seriously."
