@@ -6,21 +6,21 @@
     exec_mode: "vm"
   environment:
     PYTHONPATH: "{{ py_path_0 }}:{{ py_path_1 }}:{{ py_path_2 }}"
-  gather_facts: "yes"
+  gather_facts: yes
   pre_tasks:
     - name: Update apt cache if needed.
       apt:
-        update_cache: "yes"
+        update_cache: yes
         cache_valid_time: 86400
       when: ansible_os_family == "Debian"
       become: true
   roles:
     - role: angstwad.docker_ubuntu
-      when: run_docker == "yes"
+      when: run_docker == yes
       become: true
     - role: common
     - role: docker
-      when: run_docker == "yes"
+      when: run_docker == yes
 - hosts: slaves
   vars_files:
     - "group_vars/all"
@@ -28,16 +28,16 @@
     exec_mode: "vm"
   environment:
     PYTHONPATH: "{{ py_path_0 }}:{{ py_path_1 }}:{{ py_path_2 }}"
-  gather_facts: "yes"
+  gather_facts: yes
   pre_tasks:
     - name: Update apt cache if needed.
       apt:
-        update_cache: "yes"
+        update_cache: yes
         cache_valid_time: 86400
       when: ansible_os_family == "Debian"
       become: true
   roles:
     - role: angstwad.docker_ubuntu
-      when: run_docker == "yes"
+      when: run_docker == yes
       become: true
     - role: common

@@ -2,4 +2,4 @@
 py_path_0: "{{ lookup('env','PYTHONPATH') }}"
 py_path_1: "/usr/local/lib/python2.7/dist-packages"
 py_path_2: "/usr/local/lib/python2.7/site-packages"
-run_docker: "yes"
+run_docker: yes

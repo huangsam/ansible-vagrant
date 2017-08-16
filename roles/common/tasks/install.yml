@@ -11,5 +11,5 @@
   when: ansible_os_family == "Debian" and exec_mode == "vm"
 - name: Remove dependencies that are no longer required.
   apt:
-    autoremove: "yes"
+    autoremove: yes
   when: ansible_os_family == "Debian" and exec_mode == "vm"
