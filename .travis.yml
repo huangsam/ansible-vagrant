@@ -6,7 +6,6 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - yamllint .
   - ansible-playbook -i hosts test.yml --syntax-check
   - ansible-playbook -i hosts test.yml
   - ansible-playbook -i hosts test.yml | grep -q 'changed=0.*failed=0'
