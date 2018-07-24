@@ -1,4 +1,4 @@
-# vagrant-playbook
+# ansible-vagrant
 
 [![Build Status](https://travis-ci.org/huangsam/vagrant-playbook.svg?branch=master)](https://travis-ci.org/huangsam/vagrant-playbook)
 
